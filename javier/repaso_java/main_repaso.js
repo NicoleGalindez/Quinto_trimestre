@@ -36,7 +36,7 @@ console.log(`estamos saludando a ${saludo(nombre)}`)
 */
 //______objetos_______
 
-
+/*
 const materia={
     nombre:'arte',
     profesional:'nini',
@@ -67,8 +67,41 @@ console.table(materia2);
 materia2.nombre='javascript';
 materia2.profesional='cristina';
 materia2.intensidad='6 horas';
-
+*/
 //________arreglos___
+
+
+/*
 const arreglo=new Array(10);
-arreglo.push(2);
+//arreglo.push(2);
+arreglo.unshift(2);
 console.log(arreglo);
+*/
+
+/*
+const materias=['html', 'css', 'javascript','react','redux',' nodeJs', 'MongoDB', 'git'];
+console.table(materias);
+
+
+const materias1=['ciencias', 'español', 'matematicas'];
+console.table(materias1);
+
+//cambiar 
+let profesores =[...materias];
+profesores[0]="ciencias";
+profesores[5]="matematicas";
+console.table(profesores);
+*/
+
+
+//___recorrer un array
+
+const numeros=[1,2,3,4,5];
+let numeros1=[...numeros];
+
+const numeros2=numeros1.map(function(numero){return numero*2});
+console.table(numeros2);
+
+
+
+// ___funciones______
