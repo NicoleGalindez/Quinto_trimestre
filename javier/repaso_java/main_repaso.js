@@ -25,15 +25,15 @@ const nombrecompleto1=`Bienvenid@ ${nombre1} ${apellido1}   al repaso de javaScr
 
 console.log(nombrecompleto1);
 
-
-
+*/
+const nombre='javier ';
 function saludo(nombre){
     return 'hola' +nombre;
 }
 
-console.log(`estamos saludando a ${saludo(nombre)}`)
+console.log(`estamos saludando a ${saludo(nombre)}`);
 
-*/
+
 //______objetos_______
 
 /*
@@ -96,11 +96,11 @@ console.table(profesores);
 
 //___recorrer un array
 
-const numeros=[1,2,3,4,5];
-let numeros1=[...numeros];
+// const numeros=[1,2,3,4,5];
+// let numeros1=[...numeros];
 
-const numeros2=numeros1.map(function(numero){return numero*2});
-console.table(numeros2);
+// const numeros2=numeros1.map(function(numero){return numero*2});
+// console.table(numeros2);
 
 
 
