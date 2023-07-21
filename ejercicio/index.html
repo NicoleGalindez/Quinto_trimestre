@@ -60,10 +60,10 @@
         <div id="ganarPerder">
           <div>
               <label for="gana">Gana</label>
-              <input type="radio" id="gana" name="ganarPerder" value="gana"   >
+              <input type="radio" id="gana" name="ganarPerder" value="gana"   required>
   
               <label for="pierde">Pierde</label>
-              <input type="radio" id="pierde" name="ganarPerder" value="pierde" >
+              <input type="radio" id="pierde" name="ganarPerder" value="pierde" required>
           </div>
         </div>
 
@@ -71,8 +71,7 @@
         <label for="competencia">Competencia:</label>
         <input type="text" id="competencia" required>
 
-        <button id="sumbit"  type="button" onclick="document.getElementById(enviar(mes.value,año.value,trimestre.value,gana.values,pierde.value,competencia.value, check= document.querySelector('input[name=ganarPerder]:checked').value))">Datos</button>
-        
+        <button id="sumbit"  type="button" onclick="document.getElementById(enviar(mes.value,año.value,trimestre.value,gana.values,pierde.value,competencia.value,radio= document.querySelector('input[name=ganarPerder]:checked').value))">Datos</button>
     </form>
 </div>
 

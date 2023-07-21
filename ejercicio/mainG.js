@@ -44,8 +44,8 @@
 
 
 
-function enviar  (mes,año,trimestre,competencia,check )  {
-    let mensaje = (`en el mes de ${mes}, de el año ${año}, del trimestre ${trimestre} se  ${check}  la competencia de  ${competencia}  ` )
+function enviar  (mes,año,trimestre,competencia,radio )  {
+    let mensaje = (`en el mes de ${mes}, de el año ${año}, del trimestre ${trimestre} se  ${radio}  la competencia de  ${competencia}  ` )
 
     let mensajefinal=document.querySelector("#parrafo").textContent=mensaje
         
