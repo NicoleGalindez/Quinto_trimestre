@@ -15,33 +15,41 @@ document.addEventListener("DOMConter.tLoaled", function(){
 const loginform=document.querySelector('#loginform');
 loginform.addEventListener("sumbit ", function(event){
     event.preventDefault();
-    const email=getvalue('#usuario');
-    const password=getvalue('#contraseña');
-     
-   if(!validationEmail(email)){
-    alert('ingrese un correo valido');
-    return 
-     }
-  if(password.length <8 ){
-    alert('la contraseña debe tener al menos 8 caracteres')
-  }
+    let email=document.querySelector('#usuario').value;
+    let password=document.querySelector('#contraseña').value;
 
-  if(email=='admin@correo.com'){
-  
-    email.addEventListener('click', ()=>{
-        email.style.backgroud='ligthblue')
+    let boton=documet.querySelector('#boton');
+   boton.addEventListener('onclick', inicio(email,password));
 
-  }
+})
+function inicio(email, password){
+    switch(email){
+        case 'admin@correo.com':
+        if (password=='11111111'){
+            document.body.style.backgroundColor='blue';
+        }
+        else{
+            alert('dijita un correo valido')}
+        break;
+        default:
+            if(email==)
+
+    }
+
+}
+
+})
 
 
-})})
 
 
-
-
-
-
-
+/*
+if(email=='admin@correo.com'){
+    email.addEventListener('onclick', ()=>{
+        email.style.backgroud='ligthblue';
+    });
+    }
+*/
 
 
 
