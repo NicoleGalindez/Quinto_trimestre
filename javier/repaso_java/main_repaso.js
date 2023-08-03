@@ -384,3 +384,176 @@ validacion de correo electronico valido (que si no tiene , le diga ingrese corre
 -de usuario con cualquiera  cambie a otro color
 
 */
+
+
+
+
+//_____________EVENTOS________________
+/*
+
+///////add =adicionar  event=evento
+
+document.addEventListener('DOMContentLoaded',()=>{
+    console.log('el documento esta listo')
+});
+
+const nav= document.querySelector('.texto');
+nav.addEventListener('click', ()=>{
+    console.log('le diste click en el texto')
+});
+
+const nav1= document.querySelector('.texto');
+nav.addEventListener('mouseover', ()=>{
+    console.log('estas sobre el texto')
+});
+
+const nav2= document.querySelector('.texto');
+nav.addEventListener('mouseout', ()=>{
+    console.log('estas por fuera del texto')
+    nav2.style.backgroud='violet';
+});
+
+
+
+const buscar=document.querySelector('.busqueda');
+
+// buscar.addEventListener('keydown', ()=>{
+//     console.log('presionaste la tecla')
+// });
+
+const buscar1=document.querySelector('.busqueda');
+
+buscar1.addEventListener('keyup', ()=>{
+    console.log('soltaste la tecla')
+});
+
+
+const buscar2=document.querySelector('.busqueda');
+
+buscar2.addEventListener('blur', ()=>{
+    console.log('hiciste click por fuera y se usa en validacion ')
+});
+
+
+const buscar3=document.querySelector('.busqueda');
+
+buscar3.addEventListener('input', (evt)=>{
+    console.log(evt);
+    //console.log(evt.type);
+    //console.log(evt.target);
+    //console.log(evt.target.value);
+});
+
+*/
+
+
+// eventos en el sumbit de un formulario
+/*
+const formulario1=document.querySelector('.formulario');
+formulario1.addEventListener('submit', (evt)=>{
+    evt.preventDefault();
+    console.log(evt.target.value)
+
+})
+
+const formulario2=document.querySelector('.formulario');
+formulario2.addEventListener('submit',validarFormulario)
+function validarFormulario(e){
+    e.preventDefault();
+    console.log('vslidado con funcion noraml')
+    console.log(e.target.value)
+}
+
+
+window.addEventListener('scroll', ()=>{
+    console.log('estas en el scroll');
+})
+
+window.addEventListener('scroll', ()=>{
+    const scrollPx=window.scrllY;
+    console.log(scrollPx);
+})
+
+
+
+const premium=document.querySelector('.premium')
+const ubicacion =premium.getBoundingClientRect();
+console.log(ubicacion);
+
+if(ubicacion.top < 100){
+    console.log(' estas en la seccion premium');}
+    else {
+        console.log('no estas en la seccion premium');
+    }
+
+
+
+    const padre2=document.querySelector('.padre');
+    padre2.addEventListener('click', (e)=>{
+
+    })
+
+*/
+
+
+
+
+
+//____________RETURN_________-
+
+
+function solicitardatosdelpadre(){
+const identificacion=
+
+
+
+
+    return {
+        identificacion,
+        nombre,
+        apellido,
+        correo,
+        parentesco,
+    };
+}
+
+
+function solicitardatosdelmenor (){
+
+
+    return{
+        nombre,
+        apellido,
+        edad,
+
+    };
+}
+
+
+
+
+ function main(){
+
+ }
+
+
+
+/*
+ejercicio 2
+
+
+*/
+
+
+//_____loalstorage
+
+
+
+
+//_____________json
+
+
+
+
+
+
