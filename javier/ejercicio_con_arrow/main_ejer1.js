@@ -32,7 +32,7 @@ function inicio(email, password){
             alert('dijita un correo valido')}
         break;
         default:
-            if(email==)
+           // if(email==)
 
     }
 
