@@ -56,27 +56,32 @@
         <label for="trimestre">Trimestre:</label>
         <input type="text" id="trimestre" required>
 
+        <label for="trimestre">FEcha evaluacion:</label>
+        <input type="date" id="fechaeva" required>
+
+
 
         <div id="ganarPerder">
-          <div>
+          
               <label for="gana">Gana</label>
               <input type="radio" id="gana" name="ganarPerder" value="gana"   required>
   
               <label for="pierde">Pierde</label>
               <input type="radio" id="pierde" name="ganarPerder" value="pierde" required>
-          </div>
+          
         </div>
 
 
         <label for="competencia">Competencia:</label>
         <input type="text" id="competencia" required>
 
-        <button id="sumbit"  type="button" onclick="document.getElementById(enviar(mes.value,año.value,trimestre.value,gana.values,pierde.value,competencia.value,radio= document.querySelector('input[name=ganarPerder]:checked').value))">Datos</button>
+        <button id="sumbit"  type="button" onclick="document.getElementById(enviar(mes.value,año.value,trimestre.value,fechaeva.value,gana.values,pierde.value,radio= document.querySelector('input[name=ganarPerder]:checked').value,competencia.value,))">Datos</button>
     </form>
 </div>
 
 <h2>aqui los datos:</h2>
 <h2> <p id="parrafo"></p></h2>
+<h2> <p id="parrafo2"></p></h2>
 
 
       <script src="mainG.js"> </script>

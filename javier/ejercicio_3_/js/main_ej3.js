@@ -137,10 +137,9 @@ function crearHTML(){
 
             // añadir funcion eliminar
             botonBorrar.onclick=()=>{
-                borrarTwet(tweet.id)   
+                borrarTwet(tweet.id)
+                
                 ;}
-
-               
 //-------------------------------------------------------------------------------------------
 
             //aqui vamos a crear el html para los tweets
@@ -162,11 +161,6 @@ function crearHTML(){
     // correccion que hacia falta :--------------------
     if (images.length > 0) {
         images.forEach((imageObj) => {
-
-
-
-          
-
           // Creamos un elemento de imagen
           const img = document.createElement('img');
           img.src = imageObj.image;
@@ -186,20 +180,19 @@ function crearHTML(){
 function borrarTwet(id){
    console.log('eliminando tweet', id)
    tweets= tweets.filter(tweet=> tweet.id !== id);
-   images= images.filter(tweet=> tweet.id !== id);
     crearHTML();
+
+
+
+
+
+
 }
-
-
-
-
 
 function limpiarHTML(){
     while(listaTweets.firstChild){
         listaTweets.removeChild(listaTweets.firstChild);
-        
     }
-    
     //agregado mio___________________________________________-
     while(listaImagenes.firstChild){
         listaImagenes.removeChild(listaImagenes.firstChild);
@@ -216,5 +209,3 @@ function agregarStorage(){
     //hasta aquí___________________________________________-
 
 }
-
-

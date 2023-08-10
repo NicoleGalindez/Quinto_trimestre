@@ -14,8 +14,8 @@
 // const mes=document.getElementById('mes');
 // const año=document.getElementById('año');
 // const trimestre=document.getElementById('trimestre');
-// const ganar=document.getElementById('Gana');
-// const ganar=document.getElementById('Pierde');
+// const radio=document.getElementById('ganarPerder');
+// //const ganar=document.getElementById('Pierde');
 // const competencia=document.getElementById('competencia');
 
 
@@ -47,9 +47,43 @@
 function enviar  (mes,año,trimestre,competencia,radio )  {
     let mensaje = (`en el mes de ${mes}, de el año ${año}, del trimestre ${trimestre} se  ${radio}  la competencia de  ${competencia}  ` )
 
-    let mensajefinal=document.querySelector("#parrafo").textContent=mensaje
-        
+    let mensajefinal=document.querySelector("#parrafo").textContent=mensaje; 
 };
+
+
+
+
+//_---------------------------------------
+
+
+// function enviar  (mes,año,trimestre,fechaeva,radio ,competencia)  {
+//     let mensaje2 = (`en el mes de ${mes}, de el año ${año}, del trimestre ${trimestre} , el dia ${fechaeva} y se  ${radio}  la competencia de  ${competencia}  ` )
+
+//     let mensajefinal=document.querySelector("#parrafo2").textContent=mensaje2; 
+
+
+//     const verarray = [
+//         mes,año,trimestre,fechaeva,radio,competencia
+    
+//       ]
+//       enviararray(verarray);
+    
+
+// };
+
+
+
+function enviararray(verarray){
+    console.log(verarray)
+
+    return()=>{
+       verarray.fechaeva;
+    }
+console.table
+}
+
+
+
 
 
 
