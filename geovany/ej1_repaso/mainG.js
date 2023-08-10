@@ -77,7 +77,7 @@ function enviararray(verarray){
     console.log(verarray)
 
     return()=>{
-       verarray.fechaeva;
+       verarray.fechaeva.getMonth;
     }
 console.table
 }
