@@ -327,7 +327,7 @@ console.log(pos1y2, pos2y2, pos3y2)
 //}
 */
 
-
+//ejercicio  de codigo normal a desttructuracion (hecho)
 /*
 const useState=(nombre)=> {
     return[nombre,  (setnombre1)=> { console.log('el usuario esta activo');}
@@ -374,7 +374,8 @@ nav.addEventListener('mouseout', ()=>{
 */
 
 
-/*
+/*  
+// ejercicio 2    (hecho: ejercicio_2_)
 autenticacion y validacion de inicio de sesion y roles  
 -hacer un formulario que tenga el correo electronico y contraseña de minimo 8 caracteres
 validacion de correo electronico valido (que si no tiene , le diga ingrese correo valido)
@@ -443,8 +444,21 @@ buscar3.addEventListener('input', (evt)=>{
     //console.log(evt.target);
     //console.log(evt.target.value);
 });
+*/
+
+/*
+//evento cuando presionas usando una validacion
+const buscar4=document.querySelector('.busqueda');
+buscar4.addEventListener('input',(evt)=>{
+    if (evt.target.value === ''){
+        console.log('el campo esta vacio');
+
+    }
+    console.log(evt.target.value);
+})
 
 */
+
 
 
 // eventos en el sumbit de un formulario
@@ -456,11 +470,12 @@ formulario1.addEventListener('submit', (evt)=>{
 
 })
 
+
 const formulario2=document.querySelector('.formulario');
 formulario2.addEventListener('submit',validarFormulario)
 function validarFormulario(e){
     e.preventDefault();
-    console.log('vslidado con funcion noraml')
+    console.log('vslidado con funcion normal')
     console.log(e.target.value)
 }
 
@@ -486,29 +501,53 @@ if(ubicacion.top < 100){
         console.log('no estas en la seccion premium');
     }
 
+*/
+
+
+
+/*
+const padre = document.querySelector('.padre');
+const hijo = document.querySelector('.hijo');
+
+padre.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    console.log('estas en el padre ');
+});
+hijo.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    console.log('estas en el hijo ');
+});
+
+
+
 
 
     const padre2=document.querySelector('.padre');
     padre2.addEventListener('click', (e)=>{
 
+        if (e.target.classlist.contains('padre)){
+            console.log('estas en el padre);
+        }
+          if (e.target.classlist.contains('hjo)){
+            console.log('estas en el hijo);
+        }
+
     })
+
+
+
+
 
 */
 
 
 
-
-
 //____________RETURN_________-
 
-
+/*
 function solicitardatosdelpadre(){
-const identificacion=
-
-
-
-
-    return {
+const identificacion= 
+return{
         identificacion,
         nombre,
         apellido,
@@ -535,7 +574,7 @@ function solicitardatosdelmenor (){
  function main(){
 
  }
-
+*/
 
 
 /*
@@ -545,15 +584,292 @@ ejercicio 2
 */
 
 
-//_____loalstorage
+//_____loalstorage y JSON
+/*
+localStorage.setItem('nombre', 'javier lozada'); //agrega un valor al local storage
+sessionStorage.setItem('nombre', 'javier lozada');//agrega un valor a la seccion
+
+
+const materias={
+    nombre: 'Matematicas',
+    intensidad: 5,
+    profesor: 'Javier Lozada'
+}
+
+
+const materiasCadena = JSON.stringify(materias);
+console.log(materiasCadena);
+localStorage.setItem('Materia',materiasCadena);
+
+
+const profesores=['Juan','Pedro','Luis'];
+localStorage.setItem('Profesores',JSON.stringify(profesores)); 
+//lo podemos llamar asi sin necesidad de crear la variable
 
 
 
 
-//_____________json
+//Obteniedo valores del localStorage
+const nombre = localStorage.getItem('Nombre');
+console.log(nombre);
+
+
+const materiasJSON = JSON.parse(localStorage.getItem('Materia')); //El JSON lo convierte en un objeto
+console.log(materiasJSON);
+
+
+//Eliminando valores del Local Storage
+localStorage.removeItem('Profesores');
+localStorage.removeItem('Nombre');
+
+
+//Simular la actualización de los valores del Local Storage
+const profesoresJSON = JSON.parse(localStorage.getItem('profesores'));
+console.log(profesoresJSON);
+profesoresJSON.push('Geovanny');
+console.log(profesoresJSON);
+localStorage.setItem('Profesores', JSON.stringify(profesores));
+*/
+
+
+// ejercicio 3  . . .
+
+
+
+// fechas con java script 
+/*
+const diaHoy = new Date();
+
+// let valor; 
+// valor  = diaHoy;
+// console.log(valor);
+// console.log(typeof valor);
+
+
+//const diaHoy = new Date('11-16-1978');// siempre es Mes-Dia-Año
+//const diaHoy = new Date('November 16 1978'); // siempre es Mes-Dia-Año
+let valor; 
+valor = diaHoy;
+console.log(valor);
+
+// valor = diaHoy.getMonth();
+// valor = diaHoy.getDate();
+// valor = diaHoy.getDay();
+// valor = diaHoy.getFullYear();
+// valor = diaHoy.getMinutes();
+// valor = diaHoy.getHours();
+// valor = diaHoy.getTime();
+// valor = diaHoy.getFullYear();
+// valor = diaHoy.setFullYear(2018);
+console.log(valor);
+
+*/
+
+//_____  Set Maps y Symbols.
+
+
+
+// caracteristicas de set
+/*
+const materias = new Set();
+materias.add('Matematicas');//agregando un valor al Set
+materias.add('Ciencias');//ya no usamos la llave solo el valor
+materias.add('Historia');
+materias.add('Historia');//ya no la agrega porque el valor ya existe
+materias.add('Fisica');
+materias.add('historia');//la agrega porque es Case Sensitive
+
+
+console.log(materias);
+console.log(typeof materias);
+console.log(materias.size);
+
+// eliminar sets
+console.log(materias.has('Matematicas'));//Devuelve un valor Bool y revisa si existe o no.
+materias.delete('historia');//elimina un valor
+//materias.clear();//limpia el Set
+
+materias.forEach(function (asignatura) {
+    console.log(asignatura);
+});
+
+*/
+//------------------------------
+//elimina valores duplicados
+/*
+const numeros=[10,10,20,20,30,30,40,40,50,50];
+console.log(numeros);
+
+const eliminaDuplicado = new Set(numeros);
+console.log(eliminaDuplicado);
+*/
+
+//----weakset-------------------------------------------
+/*
+const debiles = new WeakSet();
+
+const profesores = {
+    nombre: 'Juan',
+    apellido: 'Perez',
+    materia: 'Matematicas'
+};
+
+
+debiles.add(profesores);
+console.log(profesores);
+*/
+//_______________________________________________________
+//     caracteristicas de maps
+/*
+const padres = new Map();
+
+padres.set('nombre', 'Mariana');
+padres.set('parentesco', 'Madre');
+padres.set('edad', 40);
+
+console.log(padres);
+console.log(padres.size); //devuelve la longitud del Map
+console.log(padres.get('nombre'));//devuelve el valor de la llave
+console.log(padres.has('nombre'));//devuelve un valor booleno y revisa si existe o no.
+//console.log(padres.delete('nombre'));//elimina un valor
+//padres.clear();//limpia el Map
+*/
+
+/*
+const motero = new Map([['nombre', 'Andres'], ['edad', 40]]);
+motero.set('Placa', 'AUX048B'); //lo agrega con la llave
+motero.set('nombre', 'Mario');//lo actualiza
+
+
+motero.forEach(datos => {
+    console.log(datos);
+});
+console.log(motero);
+*/
+
+// NOTA: También existen los weakmap();, y trabajan exactamente igual que los Weakset();
 
 
 
 
+//_____________ Generadores en java script
+// que es un generador ? :son funciones que me retornan un iterador y son métodos dentro del JavaScript moderno y son muy utilizados dentro de React
+
+/*
+function *crearGenerador () {
+    yield 1; //Valores que se pueden iterar
+    yield 'Javier Lozada';
+    yield 3+3;
+    yield false;
+}
+const iterador = crearGenerador(); //podemos acceder a los valores del generador
+console.log(iterador); //Inicialmente estar <<suspended>> 
+*/
+
+//----------------------------------------
+/*
+function *crearGenerador () {
+    yield 1; //Valores que se pueden iterar
+    yield 'Javier Lozada';
+    yield 3+3;
+    yield false;
+}
 
 
+const iterador=crearGenerador(); //podemos acceder a los valores del generador
+console.log(iterador); //Inicialmente estar <<suspended>> 
+console.log(iterador.next()); //despierta al iterador del generador
+console.log(iterador.next().value); //Continua al siguiente valor accediendo al valor
+
+*/
+
+
+//-- ejemplo de generador
+
+/*
+function *generadorMaterias( materias) {
+    for (let i = 0; i < materias.length; i++) {
+        yield materias[i];
+    }
+}
+
+
+const materias =['Matematicas','Ciencias','Fisica','Quimica'];
+const iterador = generadorMaterias(materias);
+console.log(iterador.next().value);
+console.log(iterador.next().value);
+console.log(iterador.next().value);
+*/
+
+
+//________otra forma de iterar en java script?
+
+let motos = ['Honda', 'Yamaha', 'Hero', 'Ducati']; //Arreglo tradicional
+let placas = new Set(['ENZ24B', 'ROU54B', 'AUX48C', 'AUL52D']); //Set
+let motoposadas = new Map(); //Map
+motoposadas.set('Nombre', 'Las Quintas');
+motoposadas.set('Ubicacion', 'Popayan');
+
+
+//Iterador Entries 
+for (let entry of motos.entries()) {
+    console.log(entry); //Imprime llave y valor
+}
+
+
+for (let entry of placas.entries()) {
+    console.log(entry); //como iteramos set y solo tiene valores muestra la llave con el valor
+}
+
+
+for (let entry of motoposadas.entries()) {
+    console.log(entry); //como iteramos set y solo tiene valores muestra la llave con el valor
+}
+
+
+//Values iterator
+for (let value of motos.values()) {
+    console.log(value); //Imprime solo los valores
+}
+
+
+for (let value of placas.values()) {
+    console.log(value); //Imprime solo los valores
+}
+
+
+for (let value of motoposadas.values()) {
+    console.log(value); //Imprime solo los valores
+}
+
+
+//Keys iterator
+for (let key of motos.keys()) {
+    console.log(key); //Imprime solo los indices
+}
+
+
+for (let key of placas.keys()) {
+    console.log(key); //Imprime solo los indices
+}
+
+
+for (let key of motoposadas.keys()) {
+    console.log(key); //Imprime solo las llaves 
+}
+
+
+//Iterador por default
+for (let moto of motos) {
+    console.log(moto);
+}
+
+
+for (let placa of placas) {
+    console.log(placa);
+}
+
+
+for (let motoposada of motoposadas) {
+    console.log(motoposada);
+}
