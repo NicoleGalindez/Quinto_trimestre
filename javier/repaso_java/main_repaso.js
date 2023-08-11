@@ -666,7 +666,7 @@ console.log(valor);
 */
 
 //_____  Set Maps y Symbols.
-
+ 
 
 
 // caracteristicas de set
@@ -873,3 +873,5 @@ for (let placa of placas) {
 for (let motoposada of motoposadas) {
     console.log(motoposada);
 }
+
+
