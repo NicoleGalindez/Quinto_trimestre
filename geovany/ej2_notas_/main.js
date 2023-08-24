@@ -222,3 +222,28 @@ function minota() {
 //hasta aqui correccion con callback y porcentajes_____________________________------------
 
 // retornar otro arrgelo con el porcentaje de las notas en la funcion porcentajes,   ese arreglo retorna en calcular
+
+
+
+
+const mostrarcalculo = () => {
+     const notas1 = parseFloat(document.querySelector('#nota1').value);
+     const notas2 = parseFloat(document.querySelector('#nota2').value);
+     const notas3 = parseFloat(document.querySelector('#nota3').value);
+     const arraynotas = [notas1, notas2, notas3]; 
+      calcular(arraynotas, afunction);};
+      const calcular = (arraynotas, calcularFunction) => { 
+      calcularFunction(arraynotas)
+      .then(resultado => {
+        console.log("Resultado:", resultado);
+    });
+};
+     const afunction = arraynotas => {
+         return new Promise((resolve, reject) => {
+             const n1 = arraynotas[0] * 0.03;
+             const n2 = arraynotas[1] * 0.03;
+             const n3 = arraynotas[2] * 0.03;
+             const result = [n1, n2, n3];
+     resolve(result);
+     });
+    };

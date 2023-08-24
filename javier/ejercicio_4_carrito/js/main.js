@@ -57,6 +57,7 @@ let nuevafila = 0;
 function crearFila() {
     nuevafila = document.createElement('tr');
     carritocompra.appendChild(nuevafila);
+
 }
 
 function actualizarFila(imagen, nombre, precio) {
@@ -345,4 +346,127 @@ card9.addEventListener("click", () => {
     const preciocard9 = document.querySelector('#preciocard9').textContent;
     actualizarFila9(imagencard9, nombreproductocard9, preciocard9);
     
+});
+
+
+
+// card 10-------------------------------------------------------------
+
+let contarclick10 = 0;
+
+let nuevafila10 = 0;
+function crearFila10() {
+    nuevafila10 = document.createElement('tr');
+    carritocompra.appendChild(nuevafila10);
+}
+
+function actualizarFila10(imagen, nombre, precio) {
+    nuevafila10.innerHTML = `
+        <td><img src="${imagen}" alt="Imagen del producto" width="50px"></td>
+        <td>${nombre}</td>
+        <td>${precio}</td>
+        <td>${contarclick10}</td>
+    `;
+}
+
+crearFila10(); // Crea la fila 10
+
+// card10
+const card10 = document.querySelector('#card10');
+card10.addEventListener("click", () => {
+    contarclick10++;
+    const imagencard10 = document.querySelector('#imagencard10').src;
+    const nombreproductocard10 = document.querySelector('#nombreproductocard10').textContent;
+    const preciocard10 = document.querySelector('#preciocard10').textContent;
+    actualizarFila10(imagencard10, nombreproductocard10, preciocard10);
+    
+});
+
+
+
+// card 11-------------------------------------------------------------
+
+let contarclick11 = 0;
+
+let nuevafila11 = 0;
+function crearFila11() {
+    nuevafila11 = document.createElement('tr');
+    carritocompra.appendChild(nuevafila11);
+}
+
+function actualizarFila11(imagen, nombre, precio) {
+    nuevafila11.innerHTML = `
+        <td><img src="${imagen}" alt="Imagen del producto" width="50px"></td>
+        <td>${nombre}</td>
+        <td>${precio}</td>
+        <td>${contarclick11}</td>
+    `;
+}
+
+crearFila11(); // Crea la fila 11
+
+// card11
+const card11 = document.querySelector('#card11');
+card11.addEventListener("click", () => {
+    contarclick11++;
+    const imagencard11 = document.querySelector('#imagencard11').src;
+    const nombreproductocard11= document.querySelector('#nombreproductocard11').textContent;
+    const preciocard11 = document.querySelector('#preciocard11').textContent;
+    actualizarFila11(imagencard11, nombreproductocard11, preciocard11);
+    
+});
+
+
+
+// card 12-------------------------------------------------------------
+
+let contarclick12 = 0;
+
+let nuevafila12 = 0;
+function crearFila12() {
+    nuevafila12 = document.createElement('tr');
+    carritocompra.appendChild(nuevafila12);
+}
+
+function actualizarFila12(imagen, nombre, precio) {
+    nuevafila12.innerHTML = `
+        <td><img src="${imagen}" alt="Imagen del producto" width="50px"></td>
+        <td>${nombre}</td>
+        <td>${precio}</td>
+        <td>${contarclick12}</td>
+    `;
+}
+
+crearFila12(); // Crea la fila 12
+
+// card12
+const card12 = document.querySelector('#card12');
+card12.addEventListener("click", () => {
+    contarclick12++;
+    const imagencard12 = document.querySelector('#imagencard12').src;
+    const nombreproductocard12= document.querySelector('#nombreproductocard12').textContent;
+    const preciocard12 = document.querySelector('#preciocard12').textContent;
+    actualizarFila12(imagencard12, nombreproductocard12, preciocard12);
+    
+});
+
+
+
+
+const vaciarCarritoBtn = document.getElementById('vaciarCarrito');
+vaciarCarritoBtn.addEventListener('click', () => {
+  
+   carritocompra.removeChild(nuevafila);
+   carritocompra.removeChild(nuevafila2);
+   carritocompra.removeChild(nuevafila3);
+   carritocompra.removeChild(nuevafila4);
+   carritocompra.removeChild(nuevafila5);
+   carritocompra.removeChild(nuevafila6);
+   carritocompra.removeChild(nuevafila7);
+   carritocompra.removeChild(nuevafila8);
+   carritocompra.removeChild(nuevafila9); 
+   carritocompra.removeChild(nuevafila10);
+   carritocompra.removeChild(nuevafila11);
+   carritocompra.removeChild(nuevafila12);
+ // falta completar , elimina pero no vuelve a agregar
 });
