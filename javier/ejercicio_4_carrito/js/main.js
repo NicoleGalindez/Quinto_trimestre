@@ -1,6 +1,20 @@
 
 const carritocompra = document.getElementById('carrito');
 
+const carritolocal = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function agregarStorage() {
+    const item = {
+        imagen: imagencard1,
+        nombre: nombreproductocard1,
+        precio: preciocard1,
+        cantidad: contarclick
+    };
+    carritolocal.push(item);
+    localStorage.setItem('carrito', JSON.stringify(carritolocal));
+}
+
+
 
 // card 1-------------------------------------------------------------
 let contarclick = 0;
@@ -8,6 +22,8 @@ let nuevafila = 0;
 function crearFila() {
     nuevafila = document.createElement('tr');
     carritocompra.appendChild(nuevafila);
+
+    agregarStorage();
 }
 
 function actualizarFila(imagen, nombre, precio) {
@@ -17,6 +33,7 @@ function actualizarFila(imagen, nombre, precio) {
         <td>${precio}</td>
         <td>${contarclick}</td>
     `;
+    agregarStorage();
 }
 
 crearFila(); // Crea la fila inicial
@@ -24,11 +41,16 @@ crearFila(); // Crea la fila inicial
 // card1
 const card = document.querySelector('#card1');
 card.addEventListener("click", () => {
+  
     contarclick++;
     const imagencard1 = document.querySelector('#imagencard1').src;
     const nombreproductocard1 = document.querySelector('#nombreproductocard1').textContent;
     const preciocard1 = document.querySelector('#preciocard1').textContent;
     actualizarFila(imagencard1, nombreproductocard1, preciocard1);
+   
+    
+    agregarStorage();
+    
 });
 
 
