@@ -12,7 +12,7 @@
     <header> Buscador de ConfiApp</header>
 <br>
 
-<div class="container"> 
+<div  class="container"  class="custom-select"> 
 <div class="nombre">
 <label for=" ">Nombre</label>
 <select name="" id="nombre"> 
@@ -20,16 +20,16 @@
 </select>
 </div>
 
-<div class="apellido">
+<div class="apellido" class="custom-select">
     <label for=" ">Apellido</label>
     <select name="" id="apellido"> 
         <option value="">Seleccione</option>
     </select>  
 </div>
 
-<div class="tipodocumento">
+<div   class="tipoDocumento" class="custom-select">
     <label for=" ">Tipo deDocumento</label>
-   <select name="" id="tipodocumento">
+   <select name="" id="tipoDocumento">
     <option value="">seleccione</option>
     <option value="">Cedula de ciudadanía</option>
     <option value="">Cedula de extranjeria </option>
@@ -39,17 +39,29 @@
 
 
 
-<div class="documento">
+<div  class="documento" class="custom-select">
     <label for=" ">Documento</label>
-   <input type="text">
+    <select name="" id="documento"> 
+        <option value="">Seleccione</option>
+    </select>
+    
 </div>
 
-<div class="edad">
+<div  class="documento" class="custom-select">
     <label for=" ">Edad</label>
-   <input type="number" minlength="18" maxlength="110">
+    <select name="" id="edad"> 
+        <option value="">Seleccione</option>
+    </select>
 </div>
 
-<div class="sexo">
+<div class="ruta" class="custom-select">
+    <label for=" ">Ruta</label>
+    <select name="" id="ruta"> 
+        <option value="">Seleccione</option>
+    </select>
+</div>
+
+<div class="sexo" class="custom-select">
     <label for=" ">Sexo</label>
     <select name="" id="sexo"> 
         <option value="">Seleccione</option>
@@ -61,17 +73,10 @@
 
 
 
-<div class="ruta">
-    <label for=" ">Ruta</label>
-    <select name="" id="ruta"> 
-        <option value="">Seleccione</option>
 
-    </select>
-</div>
-
-<div class="parentesco">
+<div  class="parentezco" class="custom-select">
     <label for=" ">Parentesco</label>
-    <select name="" id="parentesco"> 
+    <select name="" id="parentezco"> 
         <option value="">Seleccione</option>
         <option value="">Madre</option>
         <option value="">Padre</option>
@@ -80,8 +85,13 @@
 </div>
 </div>
 
+<!--    -->
+<button id="buscarBtn"> Buscar</button>
 
-    <script src="js/main_buscador.js"></script>
+<div id="resultados"  class="container-resultados"> </div>
+
+    <script src="js/main_buscador.js"  type="module"></script>
 
 </body>
 </html>
+

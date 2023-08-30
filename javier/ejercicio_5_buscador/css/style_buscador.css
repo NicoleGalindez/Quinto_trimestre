@@ -22,20 +22,23 @@ header {
   
 }
 
+
 .apellido{
     font-family: Verdana;
     font-size: 15px;
  
     border-radius:5px ;
     display: flex ;
+  
 }
 
-.tipodocumento{
+.tipoDocumento{
     font-family: Verdana;
     font-size: 15px;
  
     border-radius:5px ;
     display: flex ;
+  
 }
 
 .documento{
@@ -43,6 +46,8 @@ header {
     font-size: 15px;
  
     border-radius:5px ;
+    display: flex ;
+  
    
 }
 
@@ -52,6 +57,7 @@ header {
  
     border-radius:5px ;
     display: flex ;
+  
 }
 
 .sexo{
@@ -60,6 +66,7 @@ header {
  
     border-radius:5px ;
     display: flex ;
+  
 }
 
 .ruta{
@@ -68,13 +75,15 @@ header {
  
     border-radius:5px ;
     display: flex ;
+  
 }
-.parentesco{
+.parentezco{
     font-family: Verdana;
     font-size: 15px;
  
     border-radius:5px ;
     display: flex ;
+  
 }
 
 
@@ -86,3 +95,10 @@ header {
     padding-right: 5%;
     
   }
+
+
+
+
+
+
+
