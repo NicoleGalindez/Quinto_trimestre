@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador de Pacientes</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2 class="text-center my-5 titulo">Registro de un adolecente </h2>
+    <div class="container mt-5 p-5">
+        <div id="contenido" class="row">
+            <div class="col-md-6 agregar-cita">
+                <form id="nueva-cita">
+                    <legend class="mb-4">Datos del Adolecente</legend>
+<!-- _______________________________________________________________________-->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Tipo de Documento:</label>
+                        <div class="col-sm-8 col-lg-8">
+                             <!-- <input type="text" id="TipoDocumento" name="TipoDocumento" class="form-control" placeholder="Tipo de identificación del menor">-->
+                           <select name="tipoDocumento" id="tipoDocumento"  class="form-control">
+                                <option value="">Seleccione el tipo de Documento</option>
+                                <option value="">Registro civil</option>
+                                <option value="">Tarejta de identificación</option>
+                            </select>
+                        </div>
+                    </div>
+<!-- _______________________________________________________________________-->
+
+                    <div class="form-group row">
+
+                        <label class="col-sm-4 col-lg-4 col-form-label">Número de documento:</label>
+                        <div class="col-sm-8 col-lg-8" >
+                            <input type="number" id="noDocumento" name="noDocumento" class="form-control" placeholder="Número de identificación del menor"  minlength="8" maxlength="10">
+                        </div>
+                    </div>
+<!-- _______________________________________________________________________-->
+                    <div class="form-group row">
+
+                        <label class="col-sm-4 col-lg-4 col-form-label">Nombre del Menor:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="nombreMenor" name="nombreMenor" class="form-control" placeholder="Nombre del menor">
+                        </div>
+                    </div>
+
+<!-- _______________________________________________________________________-->
+                    <div class="form-group row">
+
+                        <label class="col-sm-4 col-lg-4 col-form-label">Apellido del Menor:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="apellidoMenor" name="apellidoMenor" class="form-control" placeholder="Apellido del menor">
+                        </div>
+                    </div>
+<!-- _______________________________________________________________________-->
+            <div class="form-group row">
+
+                <label class="col-sm-4 col-lg-4 col-form-label">Foto del Menor:</label>
+                <div class="col-sm-8 col-lg-8">
+                    <input type="file" id="fotoMenor" name="fotoMenor"  placeholder="Foto del menor" >
+                <!--class="form-control"-->
+                </div>
+            </div>
+ 
+
+<!-- _______________________________________________________________________-->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Teléfono:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="tel" id="telefono" name="telefono" class="form-control"  placeholder="Número de Teléfono del menor">
+                        </div>
+                    </div>
+<!-- _______________________________________________________________________-->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Fecha de nacimiento:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="date" id="fecha" name="fecha" class="form-control">
+                        </div>
+                    </div>
+<!-- _______________________________________________________________________-->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label"> RH (Tipo de sangre):</label>
+                        <div class="col-sm-8 col-lg-8">
+                             <!-- <input type="text" id="TipoDocumento" name="TipoDocumento" class="form-control" placeholder="Tipo de identificación del menor">-->
+                           <select name="tipoSangre" id="tipoSangre"  class="form-control">
+                                <option value="">Seleccione el tipo de Sangre del menor</option>
+                                <option value="">A+</option>
+                                <option value="">A-</option>
+                                <option value="">O+</option>
+                                <option value="">O-</option>
+                                <option value="">B+</option>
+                                <option value="">B-</option>
+                                <option value="">AB+</option>
+                                <option value="">AB-</option>
+                            </select>
+                           
+                        </div>
+                    </div>
+
+<!-- _______________________________________________________________________-->
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-lg-4 col-form-label">Sexo:</label>
+                            <div class="col-sm-8 col-lg-8">
+                            <select name="sexo" id="sexo"  class="form-control">
+                                    <option value="">Seleccione el sexo del menor</option>
+                                    <option value="">Femenino</option>
+                                    <option value="">Masculino</option>
+                                    <option value="">Otro</option>
+                                   
+                                </select>
+                            
+                            </div>
+                        </div>
+
+<!-- _______________________________________________________________________-->
+                     
+                    <div class="form-group">
+                            <button type="submit" class="btn btn-success w-100 d-block">Registrar adolecente</button>
+                    </div>
+                </form>
+            </div>
+<!-- _______________________contenedor registrados______________________________________-->  
+
+            <div class="col-md-6">
+                <h2 id="administra" class="mb-4">Adolecentes registrados</h2>
+                <ul id="registrados" name="registrados" class="list-group lista-citas"></ul>
+            </div>
+        </div> <!--.row-->
+    </div><!--.container-->
+
+    <script src="js/main_6.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- _______________________________________________________________________-->
+                  <!-- <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Propietario:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="propietario" name="propietario" class="form-control"  placeholder="Nombre Dueño de la Mascota">
+                        </div>
+                    </div> --> 
+
+
+             <!--   <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="time" id="hora" name="hora" class="form-control">
+                        </div>
+                    </div> -->
+<!-- _______________________________________________________________________-->
+                   <!--  <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Sintomas:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <textarea id="sintomas" name="sintomas" class="form-control"></textarea>
+                        </div>
+                    </div>--> 
+ <!-- _______________________________________________________________________-->  
