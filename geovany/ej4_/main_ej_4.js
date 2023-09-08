@@ -21,29 +21,55 @@ function addStudent() {
   celda5.innerHTML = "<input type='number'>";
   celda6.innerHTML= "  definitiva  "
   celda7.innerHTML = `
-    <button onclick="guardarEstudiante(this)">Guardar</button>
-    <button onclick="editarestudiante(this)">Editar</button>
-    <button onclick="eliminarEstudiante(this)">Eliminar</button>
+    <button  class='botoncitos' onclick="guardarEstudiante(this)">Guardar</button>
+    <button  class='botoncitos' onclick="editarEstudiante(this)">Editar</button>
+    <button  class='botoncitos' onclick="eliminarEstudiante(this)">Eliminar</button>
   `;
 }
+
+
+// function guardarEstudiante(button) {
+//   const row = button.parentNode.parentNode;
+//   const inputs = row.querySelectorAll("input");
+  
+//   const name = inputs[0].value;
+//   const n1 = inputs[1].value;
+//   const n2 = inputs[2].value;
+//   const n3 = inputs[3].value;
+  
+  
+//   setTimeout(() => {
+//     row.cells[1].innerHTML = name;
+//     row.cells[2].innerHTML = n1;
+//     row.cells[3].innerHTML = n2;
+//     row.cells[4].innerHTML = n3;
+//   }, 1000);
+// }
+
+
 
 function guardarEstudiante(button) {
   const row = button.parentNode.parentNode;
   const inputs = row.querySelectorAll("input");
   
   const name = inputs[0].value;
-  const n1 = inputs[1].value;
-  const n2 = inputs[2].value;
-  const n3 = inputs[3].value;
+  const n1 = parseFloat(inputs[1].value); 
+  const n2 = parseFloat(inputs[2].value);
+  const n3 = parseFloat(inputs[3].value);
   
+  const definitiva = (n1 + n2 + n3) / 3;
   
   setTimeout(() => {
     row.cells[1].innerHTML = name;
     row.cells[2].innerHTML = n1;
     row.cells[3].innerHTML = n2;
     row.cells[4].innerHTML = n3;
+    row.cells[5].innerHTML = definitiva.toFixed(2); // Mostrar la definitiva con dos decimales
   }, 1000);
 }
+
+
+
 
 function editarEstudiante(button) {
   const row = button.parentNode.parentNode;

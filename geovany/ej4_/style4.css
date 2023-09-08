@@ -18,3 +18,12 @@ th{background-color: rgb(101, 148, 248);
 td{
     padding: 8px 10px;
 }
+
+
+.botoncitos{
+    border: none;
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(150, 101, 248, 0.297);
+    border-radius: 15px;
+}
