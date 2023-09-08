@@ -67,23 +67,3 @@ function eliminarEstudiante(button) {
 }
 
 
-
-
-// function guardarEstudiante(button) {
-//   const row = button.parentNode.parentNode;
-//   const inputs = row.querySelectorAll("input");
-  
-//   const name = inputs[0].value;
-//   const n1 = inputs[1].value;
-//   const n2 = inputs[2].value;
-//   const n3 = inputs[3].value;
-  
-  
-//   setTimeout(() => {
-//     row.cells[1].innerHTML = name;
-//     row.cells[2].innerHTML = n1;
-//     row.cells[3].innerHTML = n2;
-//     row.cells[4].innerHTML = n3;
-//   }, 1000);
-// }
-
