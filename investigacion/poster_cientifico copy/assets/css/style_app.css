@@ -13,7 +13,7 @@ header {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000%;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -22,6 +22,14 @@ header {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr;
+
+    grid-template-areas: "titulo   titulo    titulo  titulo "
+                         "intro   intro      intro                justificacion "
+                         "describe describe   describe            relevantes"
+                         "resultados resultados resultadoos       relevantes"
+                         "conclusiones conclusiones conclusiones  relevantes"
+                         "referencias  referencias referencias    referencias    " ;
+
 }
 
 h1 {
@@ -33,19 +41,50 @@ h2 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 17px;
 }
 
-.references {
+.referencias {
     grid-template-columns: 1fr 1fr;
 }
 
-.references a {
+
+.referencias a {
     display: block;
     margin-bottom: 10px;
 }
 
 
+/*    */
+.titulo{
+    grid-area: titulo;
+}
+
 .introduccion{
-    
+    grid-area: intro;
+}
+
+.justificacion{
+    grid-area: justificacion;
+}
+
+.describe{
+    grid-area: describe;
+    ba: #0074D9;
+}
+
+.resultados{
+    grid-area: resultados;
+}
+
+.relevantes{
+    grid-area: relevantes;
+}
+
+.conclusiones{
+    grid-area: conclusiones;
+}
+
+.referencias{
+    grid-area: referencias;
 }

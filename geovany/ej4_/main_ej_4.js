@@ -66,9 +66,6 @@ function eliminarEstudiante(button) {
   row.parentNode.removeChild(row);
 }
 
-
-
-
 // function guardarEstudiante(button) {
 //   const row = button.parentNode.parentNode;
 //   const inputs = row.querySelectorAll("input");

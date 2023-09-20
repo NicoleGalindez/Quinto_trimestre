@@ -8,30 +8,100 @@
 </head>
 <body>
     
+<!--  solo cambia el id y es de index sin modal y funciona con el js de main_ej_4.js y con promesa.js -->
+<!-- <table id="studentTable" class="tabla"> -->
 
-<table id="studentTable" class="tabla">
+<table id="tablaEstudiantes" class="tabla">
 
-<tr>
-    <th>ID</th>
-    <th>Nombre</th>
-    <th>Nota 1</th>
-    <th>Nota 2</th>
-    <th>Nota 3</th>
-    <th>Definitiva</th>
-    <th id="acciones"> acciones</th>
+
+<tr class="mismo">
+    <th class="mismo">ID</th>
+    <th class="mismo">Nombre</th>
+    <th class="mismo">Nota 1</th>
+    <th class="mismo">Nota 2</th>
+    <th class="mismo">Nota 3</th>
+    <th class="mismo">Definitiva</th>
+    <th class="mismo" id="acciones"> acciones</th>
 </tr>
 
     
 </table>
-<button class='botoncitos'  onclick="addStudent()">Añadir estudiante</button>
+<!-- boton de index sin modal y funciona con el js de main_ej_4.js y con promesa.js -->
+<!-- <button class='botoncitos'  onclick="addStudent()">Añadir estudiante</button>       -->
    
+<button  class='botoncitos' onclick="abrirModal()">Añadir Estudiante</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+
+    <h2 class="mismo" >Añadir Estudiante</h2>
+
+    <form id="formularioEstudiante">
+      <label class="mismo" for="nombre">Nombre:</label>
+      <input class="mismo" type="text" id="nombre" required><br><br>
+
+      <label class="mismo" for="nota1">Nota 1:</label>
+      <input class="mismo" type="number" id="nota1" required><br><br>
+
+      <label class="mismo" for="nota2">Nota 2:</label>
+      <input class="mismo" type="number" id="nota2" required><br><br>
+
+      <label class="mismo" for="nota3">Nota 3:</label>
+      <input class="mismo" type="number" id="nota3" required><br><br>
+
+      <button type="button"  class='botoncitos' onclick="agregarEstudianteDesdeModal()">Agregar Estudiante</button>
+    </form>
+  </div>
+</div>
+<!-- Modal de Edición -->
+<div id="myModalEdit" class="modal">
+<div class="modal-content">
+  <span class="mismo" class="close" onclick="cerrarModalEdit()">&times;</span>
+  <h2 class="mismo">Editar Estudiante</h2>
+  <form class="mismo" id="formularioEstudianteEdit">
+
+    <input class="mismo" type="hidden" id="idEdit">
+    <label class="mismo" for="nombreEdit">Nombre:</label>
+    <input class="mismo" type="text" id="nombreEdit" required><br><br>
+
+    <label class="mismo" for="nota1Edit">Nota 1:</label>
+    <input class="mismo" type="number" id="nota1Edit" required><br><br>
+
+    <label class="mismo" for="nota2Edit">Nota 2:</label>
+    <input class="mismo" type="number" id="nota2Edit" required><br><br>
+
+    <label class="mismo" for="nota3Edit">Nota 3:</label>
+    <input class="mismo" type="number" id="nota3Edit" required><br><br>
+
+    <button class="mismo" type="button"  class='botoncitos' onclick="guardarEstudianteEditado()">Guardar Cambios</button>
+  </form>
+</div>
+</div>
+
 <!-- scripts -->
 
-<!--  codigo normal:-->
+<!-- codigo normal: inicial  -->
 <!-- <script src="main_ej_4.js"></script> -->
  
-<!-- codigo con promesa: -->
-     <script src="js_promesa.js"> </script>
+
+<!-- codigo con promesa  -->
+<!-- <script src="promesa.js"> </script> -->
+
+
+<!-- codigo con modal: -->
+  <script src="modal.js"> </script> 
+
+
+<!-- codigo con metodo .then: -->
+ <!-- <script src="conTHEN.js"> </script>  -->
+
+
+<!-- codigo con async/await: -->
+<!-- <script src="conASYNCAWAIT.js"> </script> --> 
+
+
 
 </body>
 </html>
