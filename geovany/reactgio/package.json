@@ -5,18 +5,22 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon miapp.js",
+    "dev": "nodemon miapp.js",
     "test": "test"
   },
   "dependencies": {
-    "cores": "^0.8.5",
+    "bcrypt": "^5.1.1",
+    "cores": "^0.8.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.1.0",
     "mongoos": "^0.0.1-security",
+    "mongoose": "^7.6.1",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.1",
     "nodemon": "^3.0.1",
-    "sequelize": "^6.33.0"
+    "sequelize": "^6.33.0",
+    "start": "^5.1.0"
   }
 }

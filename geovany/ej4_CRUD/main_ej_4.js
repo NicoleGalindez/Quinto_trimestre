@@ -1,6 +1,6 @@
 //crud en una tabla hacer, id del estudiante, nombre,n1,n2,n3  crud boton guardar,editar, eliminar  y otro nuevo que me deje añadir otro estudiante y que cada boton tenga tiempo despues de dar click de espera
 
-let incrementarID = 1; // Inicializar el ID autoincremental
+let incrementarID = 1; 
 
 function addStudent() {
   const table = document.getElementById("studentTable");

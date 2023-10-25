@@ -1,7 +1,6 @@
 //crud en una tabla hacer, id del estudiante, nombre,n1,n2,n3  crud boton guardar,editar, eliminar  y otro nuevo que me deje añadir otro estudiante y que cada boton tenga tiempo despues de dar click de espera
 
-let incrementarID = 1; // Inicializar el ID autoincremental
-
+let incrementarID = 1;
 function addStudent() {
   const table = document.getElementById("studentTable");
   const newRow = table.insertRow(-1);
@@ -44,7 +43,7 @@ function guardarEstudiante(button) {
     row.cells[2].innerHTML = n1;
     row.cells[3].innerHTML = n2;
     row.cells[4].innerHTML = n3;
-    row.cells[5].innerHTML = definitiva.toFixed(2); // Mostrar la definitiva con dos decimales
+    row.cells[5].innerHTML = definitiva.toFixed(2); 
   }, 1000);
 }
 

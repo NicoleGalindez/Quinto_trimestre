@@ -1,28 +1,27 @@
 import express from "express";
 import cors from "cors";
-import mirutaaprendiz   from "mirutaaprendiz";
-import mibase from "./bases/bases";
+import router from "./rutas/mirutas.js";
+import mongoose from "mongoose";
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send("¡Hoy casi pierdo la clase de Node!");
+app.use(cors()); // Enable CORS
+app.use(express.json()); // Parse JSON requests
+// Connect to MongoDB
+try {
+  await mongoose.connect('mongodb://localhost/estudiantes', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  console.log("MongoDB connection successful");
+} catch (error) {
+  console.error("Error connecting to MongoDB", error);}
+
+// Define routes
+app.use("/aprendices", router);
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
-
-app.use('/aprendices', mirutaaprendiz)
-
-try{
-    await mibase.authenticate()
-    console.log("conexion exitosa");
-}
-    catch(error) {
-        console.log("error de conexion");
-}
-
-app.listen(8000, () => {
-    console.log("¡Lo logramos! Servidor en http://localhost:8000");
-});
-
 
