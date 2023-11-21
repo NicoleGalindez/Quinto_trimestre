@@ -65,3 +65,5 @@ router.delete("/resultados/:id", resultadosController.eliminarResultadoPorID);
 
 
 export default router;
+
+

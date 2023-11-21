@@ -76,3 +76,5 @@ export const eliminarResultadoPorID = async (req, res) => {
 const resultadosController={
   obtenerResultadoPorID,obtenerTodosLosResultados,crearResultado,actualizarResultadoPorID,eliminarResultadoPorID}
 export default resultadosController;
+
+
